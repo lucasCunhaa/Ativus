@@ -1,63 +1,19 @@
-// ════════════════════════════════════════════════════════════
-//  firebase.js — Configuração e inicialização do Firebase
-//  Substitua os valores abaixo com os do seu projeto em:
-//  https://console.firebase.google.com → Configurações → Seus apps
-// ════════════════════════════════════════════════════════════
+import { initializeApp, getApps } from 'firebase/app';
+import { getAuth }      from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
 
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js';
-import {
-  getAuth,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  sendPasswordResetEmail,
-  updateProfile,
-  GoogleAuthProvider,
-  GithubAuthProvider,
-  signInWithPopup
-} from 'https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js';
-import {
-  getFirestore,
-  doc,
-  setDoc,
-  serverTimestamp
-} from 'https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js';
-
-// ── Suas credenciais do Firebase ──
 const firebaseConfig = {
-  apiKey:            "SUA_API_KEY",
-  authDomain:        "seu-projeto.firebaseapp.com",
-  projectId:         "seu-projeto",
-  storageBucket:     "seu-projeto.appspot.com",
-  messagingSenderId: "SEU_SENDER_ID",
-  appId:             "SEU_APP_ID"
+  apiKey:            process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain:        process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId:         process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket:     process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId:             process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
-// ── Inicialização ──
-const app  = initializeApp(firebaseConfig);
+// Evita inicialização duplicada (importante no Next.js com SSR)
+const app  = getApps().length ? getApps()[0] : initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db   = getFirestore(app);
 
-// ── Expõe para o app.js via window._fb ──
-window._fb = {
-  auth,
-  db,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  sendPasswordResetEmail,
-  updateProfile,
-  GoogleAuthProvider,
-  GithubAuthProvider,
-  signInWithPopup,
-  doc,
-  setDoc,
-  serverTimestamp
-};
-
-// ── Listener de estado de autenticação ──
-auth.onAuthStateChanged(user => {
-  if (user) {
-    window.showToast?.('success', `✅ Bem-vindo, ${user.displayName || user.email}!`);
-    // Redirecionar para o dashboard após login bem-sucedido:
-    // setTimeout(() => { window.location.href = '/dashboard'; }, 1500);
-  }
-});
+export { auth, db };

@@ -1,0 +1,11 @@
+# Ambiente
+.env
+.env.local
+.env.production
+
+# Node
+node_modules/
+
+# Build
+dist/
+.next/

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Dashboard — Ativus</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/public/styles/dashboard.css"/>
+</head>
+<body>
+
+<!-- ── SIDEBAR ── -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <a href="/" class="sidebar-logo">
+      <svg viewBox="0 0 36 36" fill="none">
+        <rect width="36" height="36" rx="10" fill="#1E3A8A"/>
+        <path d="M18 7L9 24H13L18 14L23 24H27L18 7Z" fill="#FFFFFF"/>
+        <path d="M12 20C12 20 15 22 18 22C21 22 24 20 24 20" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="11" cy="26" r="2.5" fill="#22C55E"/>
+      </svg>
+      <span class="sidebar-logo-text">ativus</span>
+    </a>
+    <button class="sidebar-toggle" id="sidebarToggle" aria-label="Fechar menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Principal</div>
+    <a href="#" class="nav-item active" data-page="dashboard">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      Dashboard
+    </a>
+    <a href="#" class="nav-item" data-page="tarefas">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+      Tarefas
+      <span class="nav-badge">4</span>
+    </a>
+    <a href="#" class="nav-item" data-page="projetos">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+      Projetos
+    </a>
+    <a href="#" class="nav-item" data-page="calendario">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      Calendário
+    </a>
+
+    <div class="nav-section-label" style="margin-top:12px">Time</div>
+    <a href="#" class="nav-item" data-page="equipe">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+      Equipe
+    </a>
+    <a href="#" class="nav-item" data-page="relatorios">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+      Relatórios
+    </a>
+
+    <div class="nav-section-label" style="margin-top:12px">Sistema</div>
+    <a href="#" class="nav-item" data-page="notificacoes">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+      Notificações
+      <span class="nav-badge nav-badge-red">2</span>
+    </a>
+    <a href="#" class="nav-item" data-page="configuracoes">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+      Configurações
+    </a>
+  </nav>
+
+  <!-- User profile -->
+  <div class="sidebar-user">
+    <div class="user-avatar" id="userAvatar">JO</div>
+    <div class="user-info">
+      <p class="user-name" id="userName">João Oliveira</p>
+      <p class="user-plan">Plano Gratuito</p>
+    </div>
+    <button class="logout-btn" id="logoutBtn" title="Sair">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+    </button>
+  </div>
+</aside>
+
+<!-- ── OVERLAY (mobile) ── -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- ── MAIN CONTENT ── -->
+<main class="main" id="main">
+
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="topbar-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" placeholder="Buscar tarefas, projetos..." id="searchInput"/>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <div class="date-range">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        <span id="currentDate">Carregando...</span>
+      </div>
+      <button class="topbar-icon-btn" id="notifBtn" aria-label="Notificações">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+        <span class="notif-dot"></span>
+      </button>
+      <div class="topbar-avatar" id="topbarAvatar">JO</div>
+    </div>
+  </header>
+
+  <!-- Page content -->
+  <div class="page-content" id="pageContent">
+
+    <!-- ── DASHBOARD PAGE ── -->
+    <div id="page-dashboard" class="page active">
+
+      <!-- Welcome -->
+      <div class="welcome-row">
+        <div>
+          <h1 class="page-title">Olá, <span id="welcomeName">João</span>! 👋</h1>
+          <p class="page-sub">Aqui está o resumo das suas atividades de hoje.</p>
+        </div>
+        <button class="btn-new-task" id="btnNewTask">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Nova tarefa
+        </button>
+      </div>
+
+      <!-- KPI Cards -->
+      <div class="kpi-grid">
+        <div class="kpi-card kpi-blue">
+          <div class="kpi-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="kpi-info">
+            <span class="kpi-label">Em andamento</span>
+            <span class="kpi-value" id="kpiAndamento">0</span>
+          </div>
+          <div class="kpi-trend up">+3 hoje</div>
+        </div>
+        <div class="kpi-card kpi-green">
+          <div class="kpi-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div class="kpi-info">
+            <span class="kpi-label">Concluídas</span>
+            <span class="kpi-value" id="kpiConcluidas">0</span>
+          </div>
+          <div class="kpi-trend up">+12 semana</div>
+        </div>
+        <div class="kpi-card kpi-yellow">
+          <div class="kpi-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <div class="kpi-info">
+            <span class="kpi-label">Pendentes</span>
+            <span class="kpi-value" id="kpiPendentes">0</span>
+          </div>
+          <div class="kpi-trend neutral">atenção</div>
+        </div>
+        <div class="kpi-card kpi-red">
+          <div class="kpi-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div class="kpi-info">
+            <span class="kpi-label">Atrasadas</span>
+            <span class="kpi-value" id="kpiAtrasadas">0</span>
+          </div>
+          <div class="kpi-trend down">urgente</div>
+        </div>
+      </div>
+
+      <!-- Main grid -->
+      <div class="dashboard-grid">
+
+        <!-- Checklist / Tarefas recentes -->
+        <div class="dash-card dash-card-wide">
+          <div class="card-header">
+            <h3 class="card-title">Tarefas recentes</h3>
+            <div class="card-header-actions">
+              <select class="filter-select" id="filterStatus">
+                <option value="all">Todas</option>
+                <option value="andamento">Em andamento</option>
+                <option value="pendente">Pendentes</option>
+                <option value="atrasada">Atrasadas</option>
+                <option value="concluida">Concluídas</option>
+              </select>
+              <a href="#" class="card-link" onclick="switchPage('tarefas')">Ver todas →</a>
+            </div>
+          </div>
+          <div class="task-list" id="taskList">
+            <!-- Preenchido via JS -->
+          </div>
+        </div>
+
+        <!-- Progresso dos projetos -->
+        <div class="dash-card">
+          <div class="card-header">
+            <h3 class="card-title">Progresso dos projetos</h3>
+            <a href="#" class="card-link" onclick="switchPage('projetos')">Ver todos →</a>
+          </div>
+          <div class="project-list" id="projectList">
+            <!-- Preenchido via JS -->
+          </div>
+          <!-- Mini donut chart -->
+          <div class="donut-wrap">
+            <svg class="donut-svg" viewBox="0 0 100 100">
+              <circle class="donut-bg"   cx="50" cy="50" r="38" stroke-dasharray="239" stroke-dashoffset="0"/>
+              <circle class="donut-seg donut-green"  cx="50" cy="50" r="38" stroke-dasharray="108 131" stroke-dashoffset="0"/>
+              <circle class="donut-seg donut-blue"   cx="50" cy="50" r="38" stroke-dasharray="72 167"  stroke-dashoffset="-108"/>
+              <circle class="donut-seg donut-yellow" cx="50" cy="50" r="38" stroke-dasharray="38 201"  stroke-dashoffset="-180"/>
+              <circle class="donut-seg donut-red"    cx="50" cy="50" r="38" stroke-dasharray="24 215"  stroke-dashoffset="-218"/>
+              <text x="50" y="46" class="donut-center-num">75%</text>
+              <text x="50" y="57" class="donut-center-label">Geral</text>
+            </svg>
+            <div class="donut-legend">
+              <div class="legend-item"><span class="legend-dot ld-green"></span>Concluídas 45%</div>
+              <div class="legend-item"><span class="legend-dot ld-blue"></span>Andamento 30%</div>
+              <div class="legend-item"><span class="legend-dot ld-yellow"></span>Pendentes 16%</div>
+              <div class="legend-item"><span class="legend-dot ld-red"></span>Atrasadas 9%</div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /dashboard-grid -->
+    </div><!-- /page-dashboard -->
+
+    <!-- ── TAREFAS PAGE ── -->
+    <div id="page-tarefas" class="page">
+      <div class="welcome-row">
+        <div>
+          <h1 class="page-title">Tarefas</h1>
+          <p class="page-sub">Gerencie e acompanhe todas as suas tarefas.</p>
+        </div>
+        <button class="btn-new-task" id="btnNewTask2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Nova tarefa
+        </button>
+      </div>
+      <div class="dash-card">
+        <div class="card-header">
+          <div class="task-filters">
+            <button class="filter-tab active" data-filter="all">Todas</button>
+            <button class="filter-tab" data-filter="andamento">Em andamento</button>
+            <button class="filter-tab" data-filter="pendente">Pendentes</button>
+            <button class="filter-tab" data-filter="atrasada">Atrasadas</button>
+            <button class="filter-tab" data-filter="concluida">Concluídas</button>
+          </div>
+        </div>
+        <div class="task-list" id="taskListFull"></div>
+      </div>
+    </div>
+
+    <!-- ── PROJETOS PAGE ── -->
+    <div id="page-projetos" class="page">
+      <div class="welcome-row">
+        <div>
+          <h1 class="page-title">Projetos</h1>
+          <p class="page-sub">Acompanhe o progresso de todos os seus projetos.</p>
+        </div>
+        <button class="btn-new-task">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Novo projeto
+        </button>
+      </div>
+      <div class="projects-full-grid" id="projectsFullGrid"></div>
+    </div>
+
+    <!-- ── PLACEHOLDER PAGES ── -->
+    <div id="page-calendario" class="page">
+      <h1 class="page-title">Calendário</h1>
+      <p class="page-sub coming-soon">Em breve — sincronização com Google Calendar e Outlook.</p>
+    </div>
+    <div id="page-equipe" class="page">
+      <h1 class="page-title">Equipe</h1>
+      <p class="page-sub coming-soon">Em breve — convide colaboradores e delegue tarefas.</p>
+    </div>
+    <div id="page-relatorios" class="page">
+      <h1 class="page-title">Relatórios</h1>
+      <p class="page-sub coming-soon">Em breve — métricas e exportação de dados.</p>
+    </div>
+    <div id="page-notificacoes" class="page">
+      <h1 class="page-title">Notificações</h1>
+      <p class="page-sub coming-soon">Em breve — alertas inteligentes configuráveis.</p>
+    </div>
+    <div id="page-configuracoes" class="page">
+      <h1 class="page-title">Configurações</h1>
+      <p class="page-sub coming-soon">Em breve — perfil, plano e preferências.</p>
+    </div>
+
+  </div><!-- /page-content -->
+</main>
+
+<!-- ── MODAL: Nova Tarefa ── -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <h3 class="modal-title">Nova tarefa</h3>
+      <button class="modal-close" id="modalClose">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <form id="newTaskForm" class="modal-body">
+      <div class="form-group">
+        <label class="form-label">Título da tarefa *</label>
+        <input type="text" class="form-input" id="taskTitle" placeholder="Ex: Revisar proposta do cliente" required/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Descrição</label>
+        <textarea class="form-input form-textarea" id="taskDesc" placeholder="Detalhes sobre a tarefa..."></textarea>
+      </div>
+      <div class="form-row-2">
+        <div class="form-group">
+          <label class="form-label">Projeto</label>
+          <select class="form-input" id="taskProject">
+            <option value="">Sem projeto</option>
+            <option value="ativus">Projeto Ativus</option>
+            <option value="marketing">Marketing</option>
+            <option value="backend">Backend</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Prioridade</label>
+          <select class="form-input" id="taskPriority">
+            <option value="normal">Normal</option>
+            <option value="alta">Alta</option>
+            <option value="urgente">Urgente</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row-2">
+        <div class="form-group">
+          <label class="form-label">Status</label>
+          <select class="form-input" id="taskStatus">
+            <option value="pendente">Pendente</option>
+            <option value="andamento">Em andamento</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Prazo</label>
+          <input type="date" class="form-input" id="taskDue"/>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-modal-cancel" id="modalCancel">Cancelar</button>
+        <button type="submit" class="btn-modal-save">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Criar tarefa
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ── TOAST ── -->
+<div class="toast" id="toast">
+  <span id="toast-msg">Operação realizada!</span>
+</div>
+
+<!-- Scripts -->
+<script type="module" src="/api/firebase.js"></script>
+<script src="/public/js/dashboard.js"></script>
+</body>
+</html>
