@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ativus — Organize. Planeje. Realize.</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/public/styles/style.css"/>
+</head>
+
+<body>
+
+<!-- ── NAVBAR ── -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <svg viewBox="0 0 36 36" fill="none">
+      <rect width="36" height="36" rx="10" fill="#1E3A8A"/>
+      <path d="M18 7L9 24H13L18 14L23 24H27L18 7Z" fill="#FFFFFF"/>
+      <path d="M12 20C12 20 15 22 18 22C21 22 24 20 24 20" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="11" cy="26" r="2.5" fill="#22C55E"/>
+    </svg>
+    <span class="nav-logo-text">ativus</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#features">Recursos</a></li>
+    <li><a href="#how">Como funciona</a></li>
+    <li><a href="#pricing">Planos</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a href="#auth" class="btn btn-outline">Entrar</a>
+    <a href="#auth" class="btn btn-primary">Começar grátis</a>
+  </div>
+</nav>
+
+<!-- ⚠️ TODO: COLE AQUI TODO O RESTO DO HTML (hero, features, etc.) SEM ALTERAR -->
+
+
+ 
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span></span> Novo: Projetos colaborativos em tempo real
+    </div>
+    <h1 class="hero-title">
+      Organize suas tarefas.<br>
+      <span class="accent">Planeje</span> seus projetos.<br>
+      <span class="accent-green">Realize</span> seus objetivos.
+    </h1>
+    <p class="hero-sub">
+      O Ativus é a plataforma completa de gestão de tarefas e projetos que transforma sua rotina em resultados. Simples, inteligente e feita para quem quer crescer.
+    </p>
+    <div class="hero-actions">
+      <a href="#auth" class="btn btn-primary btn-lg">Criar conta grátis</a>
+      <a href="#how" class="btn btn-outline btn-lg">Ver como funciona</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">+12k</div>
+        <div class="stat-label">Usuários ativos</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">98%</div>
+        <div class="stat-label">Satisfação</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">3x</div>
+        <div class="stat-label">Mais produtividade</div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="hero-visual">
+    <div class="mockup-window">
+      <div class="mockup-bar">
+        <div class="mockup-dot" style="background:#FF5F57"></div>
+        <div class="mockup-dot" style="background:#FEBC2E"></div>
+        <div class="mockup-dot" style="background:#28C840"></div>
+        <span>ativus.app/dashboard</span>
+      </div>
+      <div class="mockup-body">
+        <div class="mock-header">
+          <div>
+            <h4>Olá, João! 👋</h4>
+            <p>Aqui está o resumo das suas atividades</p>
+          </div>
+          <div style="font-size:.7rem;color:var(--text-2);background:var(--bg);padding:5px 10px;border-radius:8px;border:1px solid var(--border)">30 mai – 5 jun</div>
+        </div>
+        <div class="mock-stats">
+          <div class="mock-stat">
+            <div class="mock-stat-n" style="color:var(--blue)">18</div>
+            <div class="mock-stat-l">Em andamento</div>
+          </div>
+          <div class="mock-stat">
+            <div class="mock-stat-n" style="color:var(--green)">32</div>
+            <div class="mock-stat-l">Concluídas</div>
+          </div>
+          <div class="mock-stat">
+            <div class="mock-stat-n" style="color:#FACC15">5</div>
+            <div class="mock-stat-l">Pendentes</div>
+          </div>
+          <div class="mock-stat">
+            <div class="mock-stat-n" style="color:var(--red)">2</div>
+            <div class="mock-stat-l">Atrasadas</div>
+          </div>
+        </div>
+        <div style="font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;color:var(--text-2);margin-bottom:8px">Tarefas recentes</div>
+        <div class="mock-tasks">
+          <div class="mock-task">
+            <div class="mock-task-check done">✓</div>
+            <span class="mock-task-name done-text">Reunião com cliente — Projeto Ativus</span>
+            <span class="tag tag-green">Concluída</span>
+          </div>
+          <div class="mock-task">
+            <div class="mock-task-check prog"></div>
+            <span class="mock-task-name">Atualizar no sistema #Backend</span>
+            <span class="tag tag-blue">Em andamento</span>
+          </div>
+          <div class="mock-task">
+            <div class="mock-task-check"></div>
+            <span class="mock-task-name">Enviar relatório mensal</span>
+            <span class="tag tag-yellow">Pendente</span>
+          </div>
+          <div class="mock-task">
+            <div class="mock-task-check"></div>
+            <span class="mock-task-name">Aprovação de conteúdo Marketing</span>
+            <span class="tag tag-red">Atrasada</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ── FEATURES ── -->
+<section class="section" id="features">
+  <div class="reveal">
+    <div class="section-tag">Recursos</div>
+    <h2 class="section-title">Tudo que você precisa<br>em um só lugar</h2>
+    <p class="section-sub">Ferramentas poderosas e intuitivas para você e seu time organizarem, priorizarem e entregarem mais.</p>
+  </div>
+  <div class="features-grid reveal">
+    <div class="feature-card">
+      <div class="feature-icon fi-blue">✅</div>
+      <h3>Checklist Inteligente</h3>
+      <p>Crie e organize tarefas com subtarefas, prioridades e prazos. Marque o progresso em tempo real e nunca perca um prazo.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon fi-green">📁</div>
+      <h3>Gestão de Projetos</h3>
+      <p>Organize seus projetos em kanban, lista ou calendário. Visualize o progresso com dashboards claros e objetivos.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon fi-purple">👥</div>
+      <h3>Trabalho em Equipe</h3>
+      <p>Convide colaboradores, delegue tarefas e acompanhe o desempenho de todo o time em tempo real.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon fi-yellow">📅</div>
+      <h3>Calendário Integrado</h3>
+      <p>Visualize todas as suas tarefas e prazos em um calendário intuitivo. Sincronize com Google Calendar e Outlook.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon fi-teal">📊</div>
+      <h3>Relatórios e Analytics</h3>
+      <p>Acompanhe métricas de produtividade, tempo gasto e taxa de conclusão com gráficos detalhados e exportáveis.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon fi-red">🔔</div>
+      <h3>Notificações Inteligentes</h3>
+      <p>Alertas personalizados por email, push e Slack. Fique sempre por dentro sem se sentir sobrecarregado.</p>
+    </div>
+  </div>
+</section>
+ 
+<!-- ── HOW IT WORKS ── -->
+<section class="how-bg" id="how">
+  <div style="max-width:1100px;margin:0 auto">
+    <div class="reveal">
+      <div class="section-tag">Como funciona</div>
+      <h2 class="section-title" style="color:#fff">Comece a produzir em<br>menos de 5 minutos</h2>
+      <p class="section-sub">Sem curva de aprendizado. O Ativus foi desenhado para ser simples de usar e poderoso quando você precisar.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <div class="step-num" data-step="1">1</div>
+        <h3>Crie sua conta</h3>
+        <p>Cadastre-se gratuitamente em segundos. Sem cartão de crédito necessário.</p>
+      </div>
+      <div class="step">
+        <div class="step-num" data-step="2">2</div>
+        <h3>Monte seu projeto</h3>
+        <p>Crie um projeto, adicione tarefas e convide seu time para colaborar.</p>
+      </div>
+      <div class="step">
+        <div class="step-num" data-step="3">3</div>
+        <h3>Organize com checklists</h3>
+        <p>Defina prioridades, prazos e responsáveis. Tudo visível e acessível.</p>
+      </div>
+      <div class="step">
+        <div class="step-num" data-step="4">4</div>
+        <h3>Acompanhe e realize</h3>
+        <p>Monitore o progresso em tempo real e comemore cada entrega.</p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ── PRICING ── -->
+<section class="section" id="pricing">
+  <div class="reveal" style="text-align:center">
+    <div class="section-tag">Planos</div>
+    <h2 class="section-title">Comece grátis, cresça no seu ritmo</h2>
+    <p class="section-sub" style="margin:0 auto">Escolha o plano que se adapta ao seu momento. Sem surpresas na fatura.</p>
+  </div>
+  <div class="pricing-grid reveal">
+    <div class="pricing-card">
+      <div class="pricing-tier">Gratuito</div>
+      <div class="pricing-price">R$0<small>/mês</small></div>
+      <p class="pricing-desc">Perfeito para começar e organizar sua vida pessoal.</p>
+      <ul class="pricing-features">
+        <li><span class="check">✓</span> Até 3 projetos</li>
+        <li><span class="check">✓</span> 100 tarefas por projeto</li>
+        <li><span class="check">✓</span> 1 usuário</li>
+        <li><span class="check">✓</span> Checklists e subtarefas</li>
+        <li><span class="check">✓</span> App mobile</li>
+      </ul>
+      <a href="#auth" class="btn btn-outline btn-full">Criar conta grátis</a>
+    </div>
+    <div class="pricing-card featured">
+      <div class="pricing-badge">⭐ Mais popular</div>
+      <div class="pricing-tier">Pro</div>
+      <div class="pricing-price"><sup>R$</sup>39<small>/mês</small></div>
+      <p class="pricing-desc">Para freelancers e profissionais que querem mais poder.</p>
+      <ul class="pricing-features">
+        <li><span class="check">✓</span> Projetos ilimitados</li>
+        <li><span class="check">✓</span> Tarefas ilimitadas</li>
+        <li><span class="check">✓</span> Até 5 colaboradores</li>
+        <li><span class="check">✓</span> Relatórios avançados</li>
+        <li><span class="check">✓</span> Integrações (Calendar, Slack)</li>
+        <li><span class="check">✓</span> Suporte prioritário</li>
+      </ul>
+      <a href="#auth" class="btn btn-primary btn-full">Começar Pro</a>
+    </div>
+    <div class="pricing-card">
+      <div class="pricing-tier">Times</div>
+      <div class="pricing-price"><sup>R$</sup>99<small>/mês</small></div>
+      <p class="pricing-desc">Para equipes que precisam colaborar e crescer juntos.</p>
+      <ul class="pricing-features">
+        <li><span class="check">✓</span> Tudo do Pro</li>
+        <li><span class="check">✓</span> Colaboradores ilimitados</li>
+        <li><span class="check">✓</span> Permissões avançadas</li>
+        <li><span class="check">✓</span> Dashboard do time</li>
+        <li><span class="check">✓</span> API de integração</li>
+        <li><span class="check">✓</span> SLA garantido</li>
+      </ul>
+      <a href="#auth" class="btn btn-outline btn-full">Falar com vendas</a>
+    </div>
+  </div>
+</section>
+ 
+<!-- ── AUTH SECTION ── -->
+<section class="auth-section" id="auth">
+  <div class="auth-wrapper">
+    <div class="auth-info">
+      <div class="section-tag">Acesso</div>
+      <h2 class="section-title">Entre ou crie<br>sua conta grátis</h2>
+      <p class="section-sub">Junte-se a milhares de pessoas que já organizam melhor sua vida com o Ativus.</p>
+      <ul class="auth-perks">
+        <li><div class="perk-icon">✅</div> Conta grátis para sempre — sem cartão</li>
+        <li><div class="perk-icon">🔒</div> Dados criptografados e seguros com Firebase</li>
+        <li><div class="perk-icon">📱</div> Acesso em qualquer dispositivo</li>
+        <li><div class="perk-icon">🚀</div> Configure em menos de 2 minutos</li>
+      </ul>
+    </div>
+ 
+    <div class="auth-card">
+      <div class="auth-tabs">
+        <button class="auth-tab active" onclick="switchTab('login')">Entrar</button>
+        <button class="auth-tab" onclick="switchTab('cadastro')">Cadastrar</button>
+      </div>
+ 
+      <!-- LOGIN FORM -->
+      <form id="form-login" class="auth-form visible" onsubmit="handleLogin(event)">
+        <div class="form-group">
+          <div class="forgot-row">
+            <label>Email</label>
+          </div>
+          <input type="email" class="form-input" id="login-email" placeholder="seu@email.com" required/>
+        </div>
+        <div class="form-group">
+          <div class="forgot-row">
+            <label>Senha</label>
+            <a href="#" class="forgot-link" onclick="handleForgotPassword(event)">Esqueceu a senha?</a>
+          </div>
+          <div class="password-wrapper">
+            <input type="password" class="form-input" id="login-senha" placeholder="Sua senha" required/>
+            <button type="button" class="pw-toggle" onclick="togglePw('login-senha', this)">👁</button>
+          </div>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" id="remember"/> 
+          <label for="remember">Lembrar de mim neste dispositivo</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full" id="btn-login">
+          <span class="btn-text">Entrar na minha conta</span>
+          <span class="loading-state"><span class="spinner"></span> Entrando...</span>
+        </button>
+        <div class="divider">ou continue com</div>
+        <div class="social-btns">
+          <button type="button" class="btn-social" onclick="handleGoogle()">
+            <svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            Google
+          </button>
+          <button type="button" class="btn-social" onclick="handleGithub()">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </button>
+        </div>
+        <p class="auth-footer-txt">Não tem conta? <a href="#" onclick="switchTab('cadastro')">Criar agora — é grátis</a></p>
+      </form>
+ 
+      <!-- CADASTRO FORM -->
+      <form id="form-cadastro" class="auth-form" onsubmit="handleCadastro(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nome</label>
+            <input type="text" class="form-input" id="cad-nome" placeholder="João" required/>
+          </div>
+          <div class="form-group">
+            <label>Sobrenome</label>
+            <input type="text" class="form-input" id="cad-sobrenome" placeholder="Silva"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" class="form-input" id="cad-email" placeholder="seu@email.com" required/>
+        </div>
+        <div class="form-group">
+          <label>Senha</label>
+          <div class="password-wrapper">
+            <input type="password" class="form-input" id="cad-senha" placeholder="Mínimo 8 caracteres" required minlength="8"/>
+            <button type="button" class="pw-toggle" onclick="togglePw('cad-senha', this)">👁</button>
+          </div>
+        </div>
+        <div id="pw-strength" style="display:none">
+          <div style="display:flex;gap:4px;margin-top:-8px">
+            <div id="ps1" style="height:3px;flex:1;border-radius:2px;background:var(--border);transition:background .3s"></div>
+            <div id="ps2" style="height:3px;flex:1;border-radius:2px;background:var(--border);transition:background .3s"></div>
+            <div id="ps3" style="height:3px;flex:1;border-radius:2px;background:var(--border);transition:background .3s"></div>
+            <div id="ps4" style="height:3px;flex:1;border-radius:2px;background:var(--border);transition:background .3s"></div>
+          </div>
+          <p id="ps-label" style="font-size:.72rem;color:var(--text-3);margin-top:4px"></p>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" id="terms" required/>
+          <label for="terms">Concordo com os <a href="#">Termos de Uso</a> e <a href="#">Política de Privacidade</a></label>
+        </div>
+        <button type="submit" class="btn btn-green btn-full" id="btn-cadastro">
+          <span class="btn-text">🚀 Criar minha conta grátis</span>
+          <span class="loading-state"><span class="spinner"></span> Criando conta...</span>
+        </button>
+        <div class="divider">ou cadastre com</div>
+        <div class="social-btns">
+          <button type="button" class="btn-social" onclick="handleGoogle()">
+            <svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            Google
+          </button>
+          <button type="button" class="btn-social" onclick="handleGithub()">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </button>
+        </div>
+        <p class="auth-footer-txt">Já tem conta? <a href="#" onclick="switchTab('login')">Fazer login</a></p>
+      </form>
+    </div>
+  </div>
+</section>
+ 
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <svg width="32" height="32" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="10" fill="rgba(255,255,255,0.1)"/><path d="M18 7L9 24H13L18 14L23 24H27L18 7Z" fill="#FFFFFF"/><path d="M12 20C12 20 15 22 18 22C21 22 24 20 24 20" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round"/><circle cx="11" cy="26" r="2.5" fill="#22C55E"/></svg>
+        <span class="footer-logo-text">ativus</span>
+      </div>
+      <p>Organize. Planeje. Realize.<br>A plataforma que transforma intenção em resultado.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Produto</h4>
+      <ul>
+        <li><a href="#">Recursos</a></li>
+        <li><a href="#">Planos e Preços</a></li>
+        <li><a href="#">Changelog</a></li>
+        <li><a href="#">Roadmap</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="#">Sobre nós</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Carreiras</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Termos de Uso</a></li>
+        <li><a href="#">Privacidade</a></li>
+        <li><a href="#">Cookies</a></li>
+        <li><a href="#">LGPD</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 <strong>Ativus</strong>. Todos os direitos reservados.</span>
+    <span>Feito com ❤️ no Brasil 🇧🇷</span>
+  </div>
+</footer>
+
+<!-- ── TOAST ── -->
+<div class="toast" id="toast">
+  <span class="toast-icon" id="toast-icon">✅</span>
+  <span id="toast-msg">Operação realizada!</span>
+</div>
+
+<!-- Scripts -->
+<script type="module" src="/public/js/firebase.js"></script>
+<script src="/public/js/app.js"></script>
+
+</body>
+</html>
